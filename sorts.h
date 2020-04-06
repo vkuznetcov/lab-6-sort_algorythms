@@ -34,7 +34,7 @@ int partition(vector<T>& v, const int left, const int right) {
 }
 
 template <typename T, typename iterator>//O(n2)
-void Choice_Sort(vector<T>& v, const iterator begin, const iterator end) {
+void selection_sort_src(vector<T>& v, const iterator begin, const iterator end) {
 	for (iterator iterator1 = begin; iterator1 + 1 != end; ++iterator1) {
 		iterator min = iterator1;
 		for (iterator iterator2 = iterator1 + 1; iterator2 != end; ++iterator2)
@@ -44,6 +44,11 @@ void Choice_Sort(vector<T>& v, const iterator begin, const iterator end) {
 			swap(*min, *iterator1);
 		}
 	}
+}
+
+template <typename T>
+void Selection_Sort(vector<T>& v) {
+	selection_sort_src(v, v.begin(), v.end());
 }
 
 template <typename T>//O(n2)
