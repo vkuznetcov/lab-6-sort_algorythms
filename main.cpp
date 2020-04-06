@@ -24,7 +24,7 @@ int main() {
 	getchar();
 	system(CLEAR);
 	double result_cur = 0;
-	cout << "Which sort do you want to use?\n1.Choise Sort\n2.Bubble Sort\n3.Shell Sort\n4.Quick Sort\n5.Merge Sort\n0.Exit\nYour choice: ";
+	cout << "Which sort do you want to use?\n1.Selection Sort\n2.Bubble Sort\n3.Shell Sort\n4.Quick Sort\n5.Merge Sort\n0.Exit\nYour choice: ";
 	switch (getchar()) {
 	case '1': {
 		system(CLEAR);
@@ -33,7 +33,7 @@ int main() {
 			for (int j = 0; j < sim_size; ++j) {
 				Fill_Rand(vect, sizes[i]);
 				auto start = steady_clock::now();
-				Choice_Sort(vect);
+				Selection_Sort(vect);
 				auto stop = steady_clock::now();
 				vect.erase(vect.begin(), vect.end());
 				duration<double> diff = stop - start;
