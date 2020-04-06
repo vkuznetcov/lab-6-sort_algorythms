@@ -33,7 +33,7 @@ int main() {
 			for (int j = 0; j < sim_size; ++j) {
 				Fill_Rand(vect, sizes[i]);
 				auto start = steady_clock::now();
-				Choice_Sort(vect, vect.begin(), vect.end());
+				Choice_Sort(vect);
 				auto stop = steady_clock::now();
 				vect.erase(vect.begin(), vect.end());
 				duration<double> diff = stop - start;
